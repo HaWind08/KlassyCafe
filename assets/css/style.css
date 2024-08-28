@@ -1,0 +1,740 @@
+/* header */
+.header {
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+}
+
+.header .inner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header li {
+    padding: 0 16px;
+}
+
+.header li:last-child {
+    padding-right: 0;
+}
+
+.header a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 10px 0;
+}
+
+.header a.active,
+.header a:hover {
+    color: var(--color-one);
+}
+
+.header li.submenu {
+    position: relative;
+    padding-right: 30px;
+}
+
+.header li.submenu::after {
+    content: '\f107';
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+.header li.submenu ul {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    visibility: hidden;
+    position: absolute;
+    visibility: hidden;
+    top: 36px;
+    left: 16px;
+    width: 196px;
+    opacity: 0;
+    background: #fff;
+}
+
+.header li.submenu:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header li.submenu li {
+    padding: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header li.submenu li a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 14px 20px;
+    opacity: 1;
+    background: var(--bg-1);
+}
+
+.header li.submenu li:hover a {
+    margin-left: 4px;
+    color: var(--color-one);
+}
+
+.header li.submenu li:hover {
+    background: #fff;
+}
+
+/* End header */
+
+
+/* banner-main */
+.banner-main {
+    padding: 100px 0 0;
+}
+
+.banner-main .inner-wrap {
+    display: flex;
+    height: 700px;
+}
+
+.banner-main .left-content {
+    width: 32%;
+}
+
+.banner-main .inner-bg {
+    background: url(../images/top-left-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-main .inner-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.banner-main .inner-title {
+    font-family: var(--font-two);
+    font-size: 54px;
+    margin-bottom: 8px;
+}
+
+.banner-main .inner-desc {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.banner-main .right-content {
+    width: 68%;
+}
+
+.banner-main .inner-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* End banner-main */
+
+
+/* about-us */
+.about-us {
+    padding: 120px 0 80px;
+}
+
+.about-us .inner-wrap {
+    display: flex;
+}
+
+.about-us .left-content {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.about-us .left-content .inner-title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.about-us .left-content .inner-desc {
+    font-size: 14px;
+    line-height: 25px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+
+.about-us .left-content a {
+    color: var(--color-two);
+}
+
+.about-us .wrap-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us .wrap-item .inner-image {
+    width: calc(100%/3 - 20px);
+}
+
+.about-us .wrap-item .inner-image img {
+    width: 1005;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-us .right-content {
+    width: 50%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.about-us .inner-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us .right-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* End about-us */
+
+
+/* our menu */
+.our-menu {
+    padding: 120px 0 0;
+    background: #fffafa;
+}
+
+.our-head {
+    width: 40%;
+}
+
+.our-head .inner-title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.our-menu .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 16px;
+}
+
+.our-menu .inner-item {
+    width: calc(100%/5 - 24px);
+    position: relative;
+    overflow: hidden;
+}
+
+.our-menu img {
+    width: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.our-menu .inner-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--color-one);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.our-menu .inner-info {
+    background: var(--color-one);
+    color: #fff;
+    padding: 30px 18px 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(144px);
+    transition: transform 0.5s ease-out;
+}
+
+.our-menu .inner-info .inner-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.our-menu .inner-desc {
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 24px;
+}
+
+.our-menu .inner-item:hover .inner-info {
+    transform: translateY(0);
+}
+
+/* End our menu */
+
+
+/* Our Chefs */
+.our-chefs {
+    padding: 120px 0 100px;
+}
+
+.our-chefs .our-head {
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.our-chefs .our-head .head-title {
+    padding: 0;
+}
+
+.our-chefs .our-head .head-title::before {
+    display: none;
+}
+
+.our-chefs .our-head .inner-title {
+    padding: 0 400px;
+}
+
+.our-chefs .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-chefs .inner-item {
+    width: calc(100%/3 - 20px);
+    padding: 5px;
+    border: #afafaf solid 1px;
+    border-radius: 3px;
+}
+
+.our-chefs .inner-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-chefs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our-chefs .social-icons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    opacity: 0;
+    transition: all .5s;
+    visibility: hidden;
+}
+
+.our-chefs li {
+    margin: 0 10px;
+}
+
+.our-chefs a {
+    background: #fff;
+    color: var(--color-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-chefs a:hover {
+    background: var(--color-one);
+    color: #fff;
+}
+
+.our-chefs .overlay {
+    background: var(--color-text);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.our-chefs .inner-info {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.our-chefs .inner-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.our-chefs .inner-pos {
+    font-size: 14px;
+}
+
+.our-chefs .inner-item:hover {
+    border-color: var(--color-one);
+}
+
+.our-chefs .inner-item:hover .overlay {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.our-chefs .inner-item:hover .social-icons {
+    opacity: 1;
+    visibility: visible;
+}
+
+.our-chefs .inner-item:hover .inner-name {
+    color: var(--color-one);
+}
+
+/* End Our Chefs */
+
+/* reservation */
+.reservation {
+    padding: 120px 0;
+    background: url(../images/reservation-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reservation .inner-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.reservation .left-res {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.reservation .right-res {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.reservation .our-head {
+    width: 100%;
+}
+
+.reservation .our-head .head-title,
+.reservation .our-head .inner-title,
+.reservation .inner-desc {
+    color: #fff;
+
+}
+
+.reservation .our-head .inner-title {
+    padding: 0;
+}
+
+.reservation .our-head .head-title::before,
+.reservation .inner-item,
+.reservation form {
+    background: #fff;
+}
+
+.reservation .inner-desc {
+    font-size: 14px;
+    line-height: 25px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+}
+
+.reservation .inner-contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservation .inner-item {
+    position: relative;
+    padding: 50px 50px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.reservation i {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-one);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.reservation .title-item {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.reservation span a {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.reservation form {
+    padding: 40px 30px;
+    border-radius: 8px;
+}
+
+.reservation .title-form {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reservation .form-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation .input-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reservation input {
+    width: 47%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.reservation input:focus,
+.reservation textarea:focus {
+    border-color: #fb5849;
+}
+
+.reservation input::placeholder,
+.reservation textarea::placeholder {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.reservation textarea {
+    height: 150px;
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* End reservation */
+
+
+/* offers */
+.offers {
+    padding: 120px 0 80px;
+}
+
+.offers .our-head {
+    width: 100%;
+    padding: 0 375px;
+    text-align: center;
+}
+
+.offers .our-head .head-title::before {
+    display: none;
+}
+
+.offers .our-head .head-title,
+.offers .our-head .inner-title {
+    padding: 0;
+}
+
+.offers .head-tabs {
+    margin: 60px 0;
+}
+
+.offers .head-tabs ul {
+    display: flex;
+    justify-content: center;
+}
+
+.offers li {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.offers a {
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.offers a.active {
+    color: var(--color-one);
+}
+
+.offers .head-tabs .inner-desc {
+    margin-top: 16px;
+}
+
+.offers .wrap-list {
+    display: flex;
+
+}
+
+.offers .left-list {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.offers .right-list {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.offers .inner-item {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 50px;
+}
+
+.offers .inner-item img {
+    border-radius: 4px;
+}
+
+.offers .inner-info {
+    margin-left: 20px;
+}
+
+.offers .inner-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.offers .inner-info .inner-desc {
+    font-size: 14px;
+    padding-right: 60px;
+    line-height: 25px;
+}
+
+.offers .inner-price {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+    height: 70px;
+    border-radius: 4px;
+    background: var(--color-one);
+    color: #fff;
+}
+
+/* End offers */
+
+
+/* footer */
+.footer {
+    padding: 50px 0;
+    background: var(--color-one);
+}
+
+.footer .inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+}
+
+.footer li {
+    margin-right: 30px;
+}
+
+.footer .socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-one);
+    font-size: 18px;
+}
+
+.footer a:hover {
+    color: var(--color-text);
+}
+
+.footer .text {
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: right;
+}
+
+/* End footer */
